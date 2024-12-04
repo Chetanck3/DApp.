@@ -33,7 +33,7 @@
 
 2. Clone the repository by using the command
         
-        git clone https://github.com/Krish-Depani/Decentralized-Voting-System-Using-Ethereum-Blockchain.git
+        git clone https://github.com/Chetanck3/DApp..git
 
 3. Download and install [Ganache](https://trufflesuite.com/ganache/).
 
