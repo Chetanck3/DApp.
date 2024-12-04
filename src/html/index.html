@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Decentralized Voting Portal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/index.css">
+  
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="header">
+    <h1>Welcome to the Voting Portal</h1>
+    <div class="campaign-info">
+      <p>Current Campaign: <span id="currentCampaign" class="highlight"></span></p>
+      <p>Voting Dates: <span id="dates" class="highlight"></span></p>
+    </div>
+  </header>
+
+  <!-- Account Section -->
+  <section class="account-section">
+    <p id="accountAddress" class="account-info"></p>
+  </section>
+
+  <!-- Campaign Selection -->
+  <section class="card">
+    <h2>Select Campaign</h2>
+    <select id="campaignSelect" class="dropdown" onchange="App.loadCandidates()">
+      <option value="">-- Select a Campaign --</option>
+    </select>
+  </section>
+
+  <!-- Candidate Information -->
+  <section class="card">
+    <h2>Candidate Information</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Select</th>
+          <th>Name</th>
+          <th>Party</th>
+          <th>Total Votes</th>
+        </tr>
+      </thead>
+      <tbody id="boxCandidate"></tbody>
+    </table>
+  </section>
+
+  <!-- Voting Section -->
+  <section class="card">
+    <h2>Voting Section</h2>
+    <p>Please select a candidate and click the vote button.</p>
+    <button id="voteButton" class="btn" onclick="App.vote()">Vote</button>
+    <div id="msg" class="message"></div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section">
+    <h2 class="about-title">About the Team</h2>
+    <div class="team-container">
+      <div class="team-member">
+        <div class="photo member1"></div>
+        <h3>Waleed Muhammad</h3>
+        <p>Lead Developer</p>
+        <p>Implemented the voting logic and smart contract integration.</p>
+      </div>
+      <div class="team-member">
+        <div class="photo member2"></div>
+        <h3>Furqan Zaka-Ud-Din</h3>
+        <p>UI/UX Designer</p>
+        <p>Designed the user interface and enhanced user experience.</p>
+      </div>
+      <div class="team-member">
+        <div class="photo member3"></div>
+        <h3>Abdullah Mashood Jafri</h3>
+        <p>Backend Engineer</p>
+        <p>Developed the API and database architecture for seamless integration.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2024 Decentralized Voting Platform</p>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="../dist/app.bundle.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(90deg, #3f51b5, #2196f3);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* Main Container */
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* Card Section */
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card legend {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #3f51b5;
+  margin-bottom: 15px;
+}
+
+/* Form Grid */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 15px;
+  align-items: center;
+}
+
+label {
+  font-weight: bold;
+  color: #555;
+}
+
+input, select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+select {
+  background-color: #f9f9f9;
+}
+
+button {
+  background: #3f51b5;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background: #303f9f;
+}
+
+/* Result Text */
+.result-text {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #3f51b5;
+}
+
+.winner-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(95, 84, 238);
+  margin-top: 20px;
+}
+
+/* Footer */
+.footer {
+  background: #3f51b5;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+ /* About Section CSS */
+ .about-section {
+  padding: 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.about-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.team-member {
+  max-width: 200px;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  border: 0.5px solid black;
+
+}
+
+.team-member .photo {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid #285dec;
+}
+
+.team-member h3 {
+  font-size: 18px;
+  margin: 10px 0 5px;
+}
+
+.team-member p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Individual Photos */
+.photo.member1 {
+  background-image: url('../assets/waleed.jpg');
+}
+
+.photo.member2 {
+  background-image: url('../assets/furqan.jpg');
+}
+
+.photo.member3 {
+  background-image: url('../assets/abdullah.jpg');
+}

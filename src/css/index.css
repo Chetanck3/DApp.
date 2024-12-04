@@ -1,0 +1,217 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header Section */
+.header {
+  background: linear-gradient(90deg, #3f51b5, #2196f3);
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.campaign-info {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #ffeb3b;
+}
+
+/* Account Section */
+.account-section {
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
+  background: #ffffff;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Main Content Cards */
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 900px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #3f51b5;
+}
+
+/* Dropdown */
+.dropdown {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+}
+
+/* Table Styles */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.table th, .table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.table th {
+  background-color: #3f51b5;
+  color: white;
+  font-weight: bold;
+}
+
+.table td {
+  font-size: 1rem;
+}
+
+.table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Buttons */
+.btn {
+  background: #3f51b5;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+.btn:hover {
+  background: #303f9f;
+}
+
+/* Message */
+.message {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #4caf50;
+  font-weight: bold;
+}
+
+/* Footer */
+.footer {
+  background: #3f51b5;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    padding: 15px;
+    margin: 15px;
+  }
+
+  .table th, .table td {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+ /* About Section CSS */
+ .about-section {
+  padding: 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.about-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.team-member {
+  max-width: 200px;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  border: 0.5px solid black;
+
+}
+
+.team-member .photo {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid #285dec;
+}
+
+.team-member h3 {
+  font-size: 18px;
+  margin: 10px 0 5px;
+}
+
+.team-member p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Individual Photos */
+.photo.member1 {
+  background-image: url('../assets/waleed.jpg');
+}
+
+.photo.member2 {
+  background-image: url('../assets/furqan.jpg');
+}
+
+.photo.member3 {
+  background-image: url('../assets/abdullah.jpg');
+}

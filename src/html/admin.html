@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Portal</title>
+  <link rel="stylesheet" href="../css/admin.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <h1>Admin Panel</h1>
+  </header>
+
+  <main class="container">
+    <!-- Add Candidate Section -->
+    <section class="card">
+      <legend>Add Candidate</legend>
+      <div class="form-grid">
+        <label>Name:</label>
+        <input id="name" type="text" name="name" placeholder="Candidate's name">
+        <label>Party:</label>
+        <input id="party" type="text" name="party" placeholder="Candidate's party">
+        <label>Campaign:</label>
+        <select id="campaignSelect">
+          <option value="">Select Campaign</option>
+        </select>
+      </div>
+      <button id="addCandidate" class="btn">Add Candidate</button>
+    </section>
+
+    <!-- Add Campaign Section -->
+    <section class="card">
+      <legend>Add Campaign</legend>
+      <div class="form-grid">
+        <label>Name:</label>
+        <input id="campaignName" type="text" placeholder="Campaign name">
+        <label>Start Date:</label>
+        <input id="campaignStartDate" type="date">
+        <label>End Date:</label>
+        <input id="campaignEndDate" type="date">
+      </div>
+      <button id="addCampaign" class="btn">Add Campaign</button>
+    </section>
+
+    <!-- Campaign Result Section -->
+    <section class="card">
+      <legend>Campaign Result</legend>
+      <div class="form-grid">
+        <label>Select Campaign:</label>
+        <select id="campaignSelectTwo">
+          <option value="">Select Campaign</option>
+        </select>
+      </div>
+      <button id="announceResult" class="btn">Announce Result</button>
+      <p id="result" class="result-text"></p>
+      <div id="winner" class="winner-text"></div>
+    </section>
+  </main>
+
+  <section class="about-section">
+    <h2 class="about-title">About the Team</h2>
+    <div class="team-container">
+      <div class="team-member">
+        <div class="photo member1"></div>
+        <h3>Waleed Muhammad</h3>
+        <p>Lead Developer</p>
+        <p>Implemented the voting logic and smart contract integration.</p>
+      </div>
+      <div class="team-member">
+        <div class="photo member2"></div>
+        <h3>Furqan Zaka-Ud-Din</h3>
+        <p>UI/UX Designer</p>
+        <p>Designed the user interface and enhanced user experience.</p>
+      </div>
+      <div class="team-member">
+        <div class="photo member3"></div>
+        <h3>Abdullah Mashood Jafri</h3>
+        <p>Backend Engineer</p>
+        <p>Developed the API and database architecture for seamless integration.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2024 Decentralized Voting Platform</p>
+  </footer>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="../dist/app.bundle.js"></script>
+</body>
+</html>
