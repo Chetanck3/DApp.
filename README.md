@@ -49,31 +49,58 @@
 
 9. In the database created, create new table named <b>voters</b> in the given format and add some values.
 
-         CREATE DATABASE voter_db;
-
+               -- Create the database
+        CREATE DATABASE voter_db;
+        
+        -- Use the database
         USE voter_db;
-
+        
+        -- Create the voters table (for general user data like voter_id, role, password)
         CREATE TABLE voters (
-        voter_id VARCHAR(36) PRIMARY KEY NOT NULL,
-        role ENUM('admin', 'user') NOT NULL,
-        password VARCHAR(255) NOT NULL
+            voter_id VARCHAR(36) PRIMARY KEY NOT NULL,
+            role ENUM('admin', 'user') NOT NULL,
+            password VARCHAR(255) NOT NULL
         );
-
-
+        
+        -- Create a table to store fingerprint (WebAuthn) credentials
+        CREATE TABLE fingerprint_data (
+            voter_id VARCHAR(36) PRIMARY KEY NOT NULL,
+            credential_id BLOB NOT NULL,
+            public_key BLOB NOT NULL,
+            sign_count INT NOT NULL,
+            FOREIGN KEY (voter_id) REFERENCES voters(voter_id) ON DELETE CASCADE
+        );
+        
+        -- Insert sample data for testing
         INSERT INTO voters (voter_id, role, password)
+        VALUES ('0', 'admin', 'admin123');
+        
+        -- Example of inserting WebAuthn credentials (replace with actual data)
+        INSERT INTO fingerprint_data (voter_id, credential_id, public_key, sign_count)
         VALUES 
-        ('0', 'admin', 'admin123');
-
-        -- Delete a specific user by voter_id
-        DELETE FROM voters
-        WHERE voter_id = '0';  -- Replace '0' with the voter_id of the user you want to remove
-
+        ('0', 
+          UNHEX('a3b5e3d6f8a1234b5678c9e3ff4a23d324fa56b789c0d1234e9f12ab34c5f6789'), -- Example of a credential_id (Hex format)
+          UNHEX('3045022100a8b7e4f5b84a7f06c8b09a7a5e7b0f9b799762df3b8e8504922b93a64823a3b02202c1e41d745c1c78617e1f7b9d2be6bc3725a36c76b7a90d789ed1d6d44264323'), -- Example of a public_key (Hex format)
+          0);
+        
+        -- Delete a specific user's fingerprint data by voter_id
+        DELETE FROM fingerprint_data WHERE voter_id = '0';
+        
+        -- Example to delete a specific user's fingerprint data and the user record from the voters table
+        DELETE FROM fingerprint_data WHERE voter_id = '0';
+        DELETE FROM voters WHERE voter_id = '0';
+        
         -- Delete all users from the table
         SET SQL_SAFE_UPDATES = 0;
         DELETE FROM voters;
         SET SQL_SAFE_UPDATES = 1;
-
+        
+        -- Select all voters
         SELECT * FROM voters;
+        
+        -- Select all fingerprint data
+        SELECT * FROM fingerprint_data;
+
     
    <br>
 
